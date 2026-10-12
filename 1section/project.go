@@ -40,4 +40,5 @@ func main() {
 	printLogLevel(LevelInfo)
 	printLogLevel(LevelWarning)
 	printLogLevel(LevelError)
+	printLogLevel(-1)
 }
