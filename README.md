@@ -2,21 +2,23 @@
 
 My personal repository for learning Go (Golang) through hands-on examples, practice programs, and notes.
 
-> I will update this repository daily as I learn new concepts in Go, adding practice code, examples, and notes along the way.
+> I will update this repository daily as I learn new concepts in Go, adding new directories, practice code, examples, and notes along the way.
 
-## What's inside
+## About this repository
 
-| Path | Topic |
-| --- | --- |
-| [`hello.go`](hello.go) | My first Go program |
-| [`1section/values.go`](1section/values.go) | Basic values |
-| [`1section/variable.go`](1section/variable.go) | Variables, types, zero values, and short declarations |
-| [`1section/constant.go`](1section/constant.go) | Constants |
-| [`1section/shadowing.go`](1section/shadowing.go) | Variable shadowing |
-| [`1section/enum.go`](1section/enum.go) | Enum-style constants |
-| [`1section/project.go`](1section/project.go) | Log levels using `iota`, a custom type, and a method receiver |
-| [`2section/forloop.go`](2section/forloop.go) | Loops, `break`, `continue`, arrays, and `range` |
-| [`2section/ifelse.go`](2section/ifelse.go) | Conditions and map lookups |
+This repository documents my learning journey, from understanding Go's fundamentals to exploring more advanced concepts and building small projects.
+
+You can expect:
+- Examples focused on individual concepts.
+- Practice programs and experiments.
+- Comments explaining how the code works and what I learned.
+- New topics and projects as my understanding grows.
+
+## Exploring the code
+
+Browse the repository's folders to explore the available examples. Directories group related learning material, while file names and code comments provide context for each program.
+
+The collection will keep growing. The [repository files](https://github.com/flutter-create-ani/go_learning) show what's available, and the [commit history](https://github.com/flutter-create-ani/go_learning/commits/main/) tracks my latest progress.
 
 ## Go setup
 
@@ -24,7 +26,7 @@ My personal repository for learning Go (Golang) through hands-on examples, pract
 
 Download Go for your operating system from [go.dev/dl](https://go.dev/dl/) and follow the [official installation instructions](https://go.dev/doc/install).
 
-- **macOS:** Choose the package for your processor (Apple Silicon or Intel), open it, and follow the installer.
+- **macOS:** Choose the package for your processor (Apple Silicon or Intel) and follow the installer.
 - **Windows:** Run the MSI installer and reopen your terminal afterward.
 - **Linux:** Follow the official archive installation instructions and add `/usr/local/go/bin` to your `PATH`.
 
@@ -36,7 +38,7 @@ go version
 
 If the command is not found, check your `PATH` and restart your terminal.
 
-### 2. Clone this repository
+### 2. Clone the repository
 
 With Git installed, run:
 
@@ -45,53 +47,44 @@ git clone https://github.com/flutter-create-ani/go_learning.git
 cd go_learning
 ```
 
-### 3. Run your first example
+### 3. Run an example
 
-From the repository root:
-
-```sh
-go run hello.go
-```
-
-Expected output:
-
-```text
-Hello, world!
-```
-
-Run other examples individually:
+For a standalone Go program, run its file from the repository root:
 
 ```sh
-go run 1section/variable.go
-go run 1section/project.go
-go run 2section/forloop.go
-go run 2section/ifelse.go
+go run path/to/example.go
 ```
 
-**Run one example file at a time.** The section folders contain independent programs with their own `main()` functions. Running all files in a section together can cause duplicate declaration errors. These standalone examples can be run by filename without creating a `go.mod` file.
+Replace `path/to/example.go` with the actual path of the example you want to explore.
+
+Some folders contain independent programs, each with its own `main()` function. Run those files individually; compiling them together can cause duplicate declaration errors. Standalone programs that only use the standard library can be run by filename without creating a `go.mod` file.
+
+For a project containing a `go.mod` file, follow any instructions provided with that project. Run commands from its module directory; `go run .` works when the current directory contains a runnable `main` package.
 
 ## Useful commands
+
+Replace the example path below with a real file path.
 
 | Command | Purpose |
 | --- | --- |
 | `go version` | Check the installed Go version |
-| `go run hello.go` | Compile and run an example |
-| `go build -o hello-example hello.go` | Build an executable on macOS/Linux |
-| `go build -o hello-example.exe hello.go` | Build an executable on Windows |
-| `gofmt -w hello.go` | Format a source file in place |
+| `go run path/to/example.go` | Compile and run a standalone program |
+| `go build -o example-app path/to/example.go` | Build an executable on macOS/Linux |
+| `go build -o example-app.exe path/to/example.go` | Build an executable on Windows |
+| `gofmt -w path/to/example.go` | Format a source file in place |
 | `go doc fmt.Println` | Read documentation for a function |
 
-After building, run `./hello-example` on macOS/Linux or `.\hello-example.exe` in Windows PowerShell.
+After building, run `./example-app` on macOS/Linux or `.\example-app.exe` in Windows PowerShell.
 
 ## My daily learning approach
 
 1. Learn a new concept in Go.
-2. Write a small example to understand how it works.
+2. Write an example or small project to understand it.
 3. Add comments with explanations and important observations.
-4. Run the example and experiment with different inputs.
+4. Run the code and experiment with different inputs.
 5. Commit my progress to this repository.
 
-This is a work in progress and will grow as I continue learning.
+This is an ongoing learning journal. Examples may evolve as I discover better ways to write Go.
 
 ## Learning resources
 
@@ -103,4 +96,3 @@ This is a work in progress and will grow as I continue learning.
 ---
 
 Learning by building, one concept at a time.
-
